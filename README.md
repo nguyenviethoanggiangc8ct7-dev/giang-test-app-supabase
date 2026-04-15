@@ -3,7 +3,7 @@
 Next.js 14 (App Router) + TypeScript + Tailwind + Supabase SSR.
 Demo đầy đủ **Auth · Database CRUD · Realtime · Storage**.
 
-Kết nối tới Supabase tự host: `http://supabase.matbaohosting.com:8000`
+Kết nối tới Supabase tự host: `http://supabase.com`
 
 ---
 
@@ -18,9 +18,10 @@ npm install
 
 ### 2. Chạy schema SQL trên Supabase
 
-Mở **Supabase Studio** (`http://supabase.matbaohosting.com:8000`) → **SQL Editor** → paste toàn bộ file [schema.sql](schema.sql) và chạy.
+Mở **Supabase Studio** (`http://supabase.com`) → **SQL Editor** → paste toàn bộ file [schema.sql](schema.sql) và chạy.
 
 File này sẽ tạo:
+
 - Bảng `profiles`, `posts`, `messages`
 - Row Level Security policies
 - Trigger tự tạo profile khi user đăng ký
@@ -71,20 +72,20 @@ demo-app/
 
 ## ✨ Use cases đã demo
 
-| Feature | Trang | File |
-|---------|-------|------|
-| Đăng ký email/password | `/register` | [app/register/page.tsx](app/register/page.tsx) |
-| Đăng nhập + Magic Link | `/login` | [app/login/page.tsx](app/login/page.tsx) |
-| Auth callback | `/auth/callback` | [app/auth/callback/route.ts](app/auth/callback/route.ts) |
-| Middleware bảo vệ route | `/dashboard/*` | [middleware.ts](middleware.ts) |
-| Server Component fetch | `/posts` | [app/posts/page.tsx](app/posts/page.tsx) |
-| Server Actions (INSERT/UPDATE/DELETE) | `/posts/new`, `/posts/[id]/edit` | [app/posts/actions.ts](app/posts/actions.ts) |
-| Dynamic route + ownership check | `/posts/[id]/edit` | [app/posts/[id]/edit/page.tsx](app/posts/[id]/edit/page.tsx) |
-| Storage upload + public URL | `/storage` | [app/storage/page.tsx](app/storage/page.tsx) |
-| Storage signed URL | `/storage` | [app/storage/page.tsx](app/storage/page.tsx) |
-| Realtime postgres_changes | `/realtime` | [app/realtime/page.tsx](app/realtime/page.tsx) |
-| Realtime Presence | `/realtime` | [app/realtime/page.tsx](app/realtime/page.tsx) |
-| Row Level Security | tất cả bảng | [schema.sql](schema.sql) |
+| Feature                               | Trang                            | File                                                         |
+| ------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
+| Đăng ký email/password                | `/register`                      | [app/register/page.tsx](app/register/page.tsx)               |
+| Đăng nhập + Magic Link                | `/login`                         | [app/login/page.tsx](app/login/page.tsx)                     |
+| Auth callback                         | `/auth/callback`                 | [app/auth/callback/route.ts](app/auth/callback/route.ts)     |
+| Middleware bảo vệ route               | `/dashboard/*`                   | [middleware.ts](middleware.ts)                               |
+| Server Component fetch                | `/posts`                         | [app/posts/page.tsx](app/posts/page.tsx)                     |
+| Server Actions (INSERT/UPDATE/DELETE) | `/posts/new`, `/posts/[id]/edit` | [app/posts/actions.ts](app/posts/actions.ts)                 |
+| Dynamic route + ownership check       | `/posts/[id]/edit`               | [app/posts/[id]/edit/page.tsx](app/posts/[id]/edit/page.tsx) |
+| Storage upload + public URL           | `/storage`                       | [app/storage/page.tsx](app/storage/page.tsx)                 |
+| Storage signed URL                    | `/storage`                       | [app/storage/page.tsx](app/storage/page.tsx)                 |
+| Realtime postgres_changes             | `/realtime`                      | [app/realtime/page.tsx](app/realtime/page.tsx)               |
+| Realtime Presence                     | `/realtime`                      | [app/realtime/page.tsx](app/realtime/page.tsx)               |
+| Row Level Security                    | tất cả bảng                      | [schema.sql](schema.sql)                                     |
 
 ---
 
