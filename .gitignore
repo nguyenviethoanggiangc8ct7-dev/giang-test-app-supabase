@@ -2,7 +2,10 @@ node_modules/
 .next/
 out/
 build/
-.env*.local
+# Environment files - chỉ giữ .env.example
+.env
+.env.*
+!.env.example
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
